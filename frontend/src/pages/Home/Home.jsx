@@ -1,13 +1,15 @@
 import React from 'react'
 import './Home.css'
 import Header from '../../components/Header/Header'
+import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 
 const Home = () => {
   return (
     <div>
-        {/* getting Header component on Home */}
+        {/* sequence of jsx on the homepage */}
       <Header/>
-    </div>
+      <ExploreMenu/>
+    </div>  
   )
 }
 
