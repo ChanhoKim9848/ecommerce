@@ -1,0 +1,14 @@
+.item-img-container{
+    width:100%;
+    margin:auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(0,0,0);
+    transition:0.4s;
+    animation:fadeIn 1;
+}
+
+.item-image{
+    width:100px;
+    height:100px;
+    border-radius: 15px 15px 0px;
+}

@@ -1,14 +1,25 @@
-import React, { useContext } from "react";
-import "./ItemDisplay.css";
-import { StoreContext } from "../../context/StoreContext";
+import React, { useContext } from 'react'
+import './ItemDisplay.css'
+import { StoreContext } from '../../context/StoreContext'
+import Item from '../Item/Item'
 
+
+
+// Item Display Function 
 const ItemDisplay = ({category}) => {
-  const { item_list } = useContext(StoreContext);
+  const {item_list} = useContext(StoreContext)
   return (
-    <div className="item-display" id="item-display">
-      <h2>Best Products For You!</h2>
-    </div>
-  );
-};
+    <div className='item-display' id='item-display'>
+      <h2>Items</h2>
+      <div className="item-display-list">
+        {item_list.map((item,index)=>{
+          return <Item key={index} id ={item._id} name={item.name}
+           description={item.description} price={item.price} image={item.image}/>
 
-export default ItemDisplay;
+        })}
+      </div>
+    </div>
+  )
+}
+
+export default ItemDisplay
