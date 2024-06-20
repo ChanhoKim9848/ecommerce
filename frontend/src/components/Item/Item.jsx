@@ -6,11 +6,11 @@ const Item = ({ id, name, price, description, image }) => {
       <div className="item-img-container">
         <img className="item-image" src={image} alt="" />
       </div>
+      <p className="item-desc">{description}</p>
+      <p className="item-price">${price}</p>
       <div className="item-info">
         <p>{name}</p>
       </div>
-      <p className="item-desc">{description}</p>
-      <p className="item-price">${price}</p>
     </div>
   );
 };
