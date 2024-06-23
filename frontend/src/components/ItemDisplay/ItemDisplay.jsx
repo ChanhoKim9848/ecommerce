@@ -11,22 +11,19 @@ const ItemDisplay = ({ category }) => {
       <h2>Shopping! </h2>
       <div className="item-display-list">
         {item_list.map((item, index) => {
-
           // item sort by category function
-          if(category==="All" || category===item.category){
-
-          return (
-            <Item
-              key={index}
-              id={item._id}
-              name={item.name}
-              description={item.description}
-              price={item.price}  
-              image={item.image}
-            />
-          );
+          if (category === "All" || category === item.category) {
+            return (
+              <Item
+                key={index}
+                id={item._id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            );
           }
-
         })}
       </div>
     </div>
