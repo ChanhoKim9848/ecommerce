@@ -11,6 +11,8 @@ const ItemDisplay = ({ category }) => {
       <h2>Shopping! </h2>
       <div className="item-display-list">
         {item_list.map((item, index) => {
+
+          // item sort by category function
           if(category==="All" || category===item.category){
 
           return (
