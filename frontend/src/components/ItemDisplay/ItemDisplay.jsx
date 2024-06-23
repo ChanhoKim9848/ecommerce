@@ -11,6 +11,8 @@ const ItemDisplay = ({ category }) => {
       <h2>Shopping! </h2>
       <div className="item-display-list">
         {item_list.map((item, index) => {
+          if(category==="All" || category===item.category){
+
           return (
             <Item
               key={index}
@@ -21,6 +23,8 @@ const ItemDisplay = ({ category }) => {
               image={item.image}
             />
           );
+          }
+
         })}
       </div>
     </div>

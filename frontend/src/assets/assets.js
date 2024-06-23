@@ -67,25 +67,25 @@ export const menu_list = [
 export const item_list = [
     {
         _id: "1",
-        name: "index.html",
+        name: "HTML5 Skills",
         image: item_1,
         price: 12,
         description: "Learn about Coding",
-        category: "Salad"
+        category: "HTML5"
     },
     {
         _id: "2",
-        name: "style.css",
+        name: "CSS3 Skills",
         image: item_2,
         price: 18,
         description: "Learn about Coding",
-        category: "Salad"
+        category: "CSS3"
     }, {
         _id: "3",
-        name: "assets.js",
+        name: "JavaScript Skills",
         image: item_3,
         price: 16,
         description: "Learn about Coding",
-        category: "Salad"
+        category: "JavaScript"
     }
 ]
