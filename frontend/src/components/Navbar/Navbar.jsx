@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from 'react-router-dom';
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({setShowLogin}) => {
 
 
   const [menu,setMenu] = useState("home")
+
+  const {getTotalCartAmount } = useContext(StoreContext)
 
 
 
@@ -15,7 +18,7 @@ const Navbar = ({setShowLogin}) => {
   return (
     <div className="navbar">
       {/* Navbar Logo Setting */}
-      <img src={assets.logo} alt="" className="logo" />
+      <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
       <ul className="navbar-menu">
         {/* Navbar Menu Setting */}
         {/* when a menu is clicked and active, the menu shows its underline */}
@@ -29,8 +32,10 @@ const Navbar = ({setShowLogin}) => {
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
         <div className="navbar-search-icon">
-          <img src={assets.basket_icon} alt="" />
-          <div className="dot"></div>
+          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
+
+          {/* Add to Cart Function : when item is added, shows a dot sign  */}
+          <div className={getTotalCartAmount()===0?"":"dot"}></div>
         </div>
         {/* Sign In Button */}
         <button onClick={()=>setShowLogin(true)}>Sign In</button>
