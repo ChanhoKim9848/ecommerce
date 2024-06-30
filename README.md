@@ -1,6 +1,6 @@
 # E-Commerce Web App
 
-### HTML5, CSS3, JavaScript, React
+##### HTML5, CSS3, JavaScript, React
 
 ### Project Blog
 
