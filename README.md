@@ -4,6 +4,8 @@
 
 ### Project Blog
 
+### Frontend Part
+
 ##### [Design Navbar - 15/06/24](https://blog.naver.com/detol3953/223480690554)
 ##### [Design Navbar and Header - 16/06/24](https://blog.naver.com/detol3953/223481583076)
 ##### [Design Menu -17/06/24](https://blog.naver.com/detol3953/223482762487)
@@ -15,3 +17,4 @@
 ##### [Responsive Web and Login Pop up - 27/06/24](https://blog.naver.com/detol3953/223493735425)
 ##### [Add to Cart - 29/06/24](https://blog.naver.com/detol3953/223495512053)
 ##### [Place Order Page - 30/06/24](https://blog.naver.com/detol3953/223496931170)
+
