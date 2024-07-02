@@ -40,6 +40,7 @@ const removeItem = async (req, res) => {
 
     await itemModel.findByIdAndDelete(req.body.id);
     res.json({success:true,message:"Item Removed"})
+    
   } catch (error) {
     console.log(error);
     res.json({success:false,message:"Error"})
