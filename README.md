@@ -6,10 +6,12 @@ HTML5: Define Structures and Semantics\
 CSS3: Style the element and page content\
 JavaScript: change the page dynamically without loading a different \
 HTML file, do "behind the scene" calculations and work
+
 \
 \
 ##### JavaScript
-\ Update displayed data behind the scene (weather data, stock, chat message)\
+\ 
+Update displayed data behind the scene (weather data, stock, chat message)\
 Display or use a timer\
 Validate user input and show error message\
 Keep website working even if it lost the connection
