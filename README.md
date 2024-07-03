@@ -1,6 +1,11 @@
 # E-Commerce Web App
 
 ##### HTML5, CSS3, JavaScript, React
+\
+HTML5: Define Structures and Semantics\
+CSS3: Style the element and page content\
+JavaScript: change the page dynamically without loading a different \
+HTML file, do "behind the scene" calculations and work.\
 
 ### Project Blog
 
