@@ -35,6 +35,6 @@ Keep website working even if it lost the connection
 ## Backend Part
 ##### [Connect to MongoDB and Add item to the database - 01/07/24 - 01/07/24](https://blog.naver.com/detol3953/223498164658)
 ##### [delete item from db function - 02/07/24](https://blog.naver.com/detol3953/223499401675)
-##### [Create Admin Panel](https://blog.naver.com/detol3953/223500418264)
+##### [Create Admin Panel -03/07/24](https://blog.naver.com/detol3953/223500418264)
 
 
