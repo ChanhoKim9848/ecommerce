@@ -37,5 +37,5 @@ Keep website working even if it lost the connection
 ##### [delete item from db function - 02/07/24](https://blog.naver.com/detol3953/223499401675)
 ##### [Create Admin Panel -03/07/24](https://blog.naver.com/detol3953/223500418264)
 ##### [Admin Panel - Add and Delete - 04/07/24](https://blog.naver.com/detol3953/223501737561)
-
+##### [User Authentication (Login and Logout, Register) - 08/07/24](https://blog.naver.com/detol3953/223506073396)
 

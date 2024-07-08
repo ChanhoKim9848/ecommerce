@@ -3,12 +3,12 @@ import { assets } from "../../assets/assets";
 import "./Item.css";
 import { StoreContext } from "../../context/StoreContext";
 const Item = ({ id, name, price, description, image }) => {
-  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
 
   return (
     <div className="item">
       <div className="item-img-container">
-        <img className="item-image" src={image} alt="" />
+        <img className="item-image" src={url+"/images/"+image} alt="" />
         {
           // + and - button to add cart
           !cartItems[id] ? (
