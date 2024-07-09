@@ -11,17 +11,35 @@ export const StoreContextProvider = (props) => {
   const [item_list, setItemList] = useState([]);
 
   // add to cart function, if there is no cart item: 1, else: +1
-  const addToCart = (itemId) => {
+  const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
       setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
     } else {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
+
+    // when logged in, we will have a token and bring cart data from database
+    if (token) {
+      await axios.post(
+        url + "/api/cart/add",
+        { itemId },
+        { headers: { token } }
+      );
+    }
   };
 
   // remove cart function, decrease the value by 1
-  const removeFromCart = (itemId) => {
+  const removeFromCart = async (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+
+    // logged in
+    if (token) {
+      await axios.post(
+        url + "/api/cart/remove",
+        { itemId },
+        { headers: { token } }
+      );
+    }
   };
 
   const getTotalCartAmount = () => {
@@ -42,11 +60,22 @@ export const StoreContextProvider = (props) => {
     setItemList(response.data.data);
   };
 
+  // refreshed the webpage, cart data does not disappear and still in the cart
+  const loadCartData = async (token) => {
+    const response = await axios.post(
+      url + "/api/cart/get",
+      {},
+      { headers: { token } }
+    );
+    setCartItems(response.data.cartData);
+  };
+
   useEffect(() => {
     async function loadData() {
       await fetchItemList();
       if (localStorage.getItem("token")) {
         setToken(localStorage.getItem("token"));
+        await loadCartData(localStorage.getItem("token"));
       }
     }
     loadData();
