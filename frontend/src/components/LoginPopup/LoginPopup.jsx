@@ -6,8 +6,8 @@ import axios from "axios";
 
 const LoginPopup = ({ setShowLogin }) => {
   const { url, setToken } = useContext(StoreContext);
-
   const [currState, setCurrState] = useState("Login");
+  
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -87,6 +87,9 @@ const LoginPopup = ({ setShowLogin }) => {
             required
           />
         </div>
+
+        {/* Login and Register Button */}
+
         <button type="submit">
           {currState === "Sign Up" ? "Create Account" : "Login"}
         </button>
@@ -99,12 +102,20 @@ const LoginPopup = ({ setShowLogin }) => {
           </p>
         ) : (
           <p>
-        <div className="login-popup-condition">
-          <input type="checkbox" required />
-          <p>By continuing, I agree to the terms of use & private policy.</p>
-        </div>
+            <div className="login-popup-condition">
+              <input type="checkbox" required />
+              <p>
+                By continuing, I agree to the terms of use & private policy.
+              </p>
+            </div>
             Already have an account?{" "}
-            <span onClick={() => setCurrState("Login")}>Login</span>
+            <span
+              onClick={() => {
+                setCurrState("Login");
+              }}
+            >
+              Login
+            </span>
           </p>
         )}
       </form>
