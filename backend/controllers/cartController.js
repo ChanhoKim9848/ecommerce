@@ -3,7 +3,7 @@ import userModel from "../models/userModel.js";
 // addToCart function adds items to user cart
 const addToCart = async (req, res) => {
   try {
-    // we do not send user data directly to the server, we make its token first
+    // save user data
     let userData = await userModel.findById(req.body.userId);
 
     // extract cart data
