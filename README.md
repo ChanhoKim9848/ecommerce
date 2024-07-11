@@ -34,11 +34,12 @@ Keep website working even if it lost the connection
 #####
 ## Backend Part
 ##### [Connect to MongoDB and Add item to the database - 01/07/24 - 01/07/24](https://blog.naver.com/detol3953/223498164658)
-##### [delete item from db function - 02/07/24](https://blog.naver.com/detol3953/223499401675)
-##### [Create Admin Panel -03/07/24](https://blog.naver.com/detol3953/223500418264)
+##### [Function deletes items from the database - 02/07/24](https://blog.naver.com/detol3953/223499401675)
+##### [Create Admin Panel - 03/07/24](https://blog.naver.com/detol3953/223500418264)
 ##### [Admin Panel - Add and Delete - 04/07/24](https://blog.naver.com/detol3953/223501737561)
 ##### [User Authentication (Login and Logout, Register) - 08/07/24](https://blog.naver.com/detol3953/223506073396)
 ##### [Cart Functionality - 09/07/24](https://blog.naver.com/detol3953/223507277277)
 ##### [Place Order and Payment (Stripe) - 10/07/24](https://blog.naver.com/detol3953/223508522895)
 ##### [Place Order Page - 11/07/24](https://blog.naver.com/detol3953/223509255996)
 ##### [Display Orders in Admin Panel - 11/07/24](https://blog.naver.com/detol3953/223509356878)
+##### [Order Update Function in Admin Panel - 11/07/24](https://blog.naver.com/detol3953/223509429656)

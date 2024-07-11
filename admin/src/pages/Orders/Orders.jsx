@@ -21,6 +21,18 @@ const Orders = ({ url }) => {
     }
   };
 
+  // Changing Order Status in the Order list
+  // call order status api
+  const statusHandler = async (event, orderId) => {
+    const response = await axios.post(url+"/api/order/status",{
+      orderId,
+      status:event.target.value
+    })
+    if (response.data.success) {
+      await fetchAllOrders();
+    }
+  };
+
   useEffect(() => {
     fetchAllOrders();
   }, []);
@@ -50,7 +62,7 @@ const Orders = ({ url }) => {
               </p>
               {/* User address of the orders */}
               <div className="order-item-address">
-                <p>{"Address: "+ order.address.street + ","}</p>
+                <p>{"Address: " + order.address.street + ","}</p>
                 <p>
                   {order.address.city +
                     ", " +
@@ -61,11 +73,16 @@ const Orders = ({ url }) => {
                     order.address.zipcode}
                 </p>
               </div>
-              <p className="order-item-phone">{"Contact: "+ order.address.phone}</p>
+              <p className="order-item-phone">
+                {"Contact: " + order.address.phone}
+              </p>
             </div>
             <p>Items : {order.items.length}</p>
             <p>£{order.amount}</p>
-            <select>
+            <select
+              onChange={(event) => statusHandler(event, order._id)}
+              value={order.status}
+            >
               {/* Order Processing in Admin Panel */}
               <option value="Item Processing">Item Processing</option>
               <option value="Out for Delivery">Out for Delivery</option>
