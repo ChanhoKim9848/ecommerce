@@ -79,7 +79,7 @@ const Navbar = ({ setShowLogin }) => {
 
             {/* when it is logged in, the navbar has orders and logout buttons */}
             <ul className="nav-profile-dropdown">
-              <li>
+              <li onClick={()=>navigate('/myorders')}>
                 {/* orders and logout buttons */}
                 <img src={assets.bag_icon} alt="" />
                 <p>Orders</p>

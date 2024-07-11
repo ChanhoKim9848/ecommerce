@@ -40,3 +40,4 @@ Keep website working even if it lost the connection
 ##### [User Authentication (Login and Logout, Register) - 08/07/24](https://blog.naver.com/detol3953/223506073396)
 ##### [Cart Functionality - 09/07/24](https://blog.naver.com/detol3953/223507277277)
 ##### [Place Order and Payment (Stripe) - 10/07/24](https://blog.naver.com/detol3953/223508522895)
+##### [Place Order Page - 11/07/24](https://blog.naver.com/detol3953/223509255996)
